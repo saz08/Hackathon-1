@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile detail</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+
+        body {
+            font: 400 15px Lato, sans-serif;
+            line-height: 1.8;
+            color: #818181;
+        }
+        h2 {
+            font-size: 24px;
+            text-transform: uppercase;
+            color: #303030;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+        h4 {
+            font-size: 19px;
+            line-height: 1.375em;
+            color: #303030;
+            font-weight: 400;
+            margin-bottom: 30px;
+        }
+        .jumbotron {
+            background-color: white;
+            color: #fff;
+            padding: 100px 25px;
+            font-family: Montserrat, sans-serif;
+        }
+        .container-fluid {
+            padding: 60px 50px;
+        }
+        .bg-grey {
+            background-color: #f6f6f6;
+        }
+        .logo-small {
+            color: darkslategrey;
+            font-size: 50px;
+        }
+        .logo {
+            color: darkslategrey;
+            font-size: 200px;
+        }
+        .thumbnail {
+            padding: 0 0 15px 0;
+            border: none;
+            border-radius: 0;
+        }
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            margin-bottom: 10px;
+        }
+        .carousel-control.right, .carousel-control.left {
+            background-image: none;
+            color: darkslategrey;
+        }
+        .carousel-indicators li {
+            border-color: darkslategrey;
+        }
+        .carousel-indicators li.active {
+            background-color: darkslategrey;
+        }
+        .item h4 {
+            font-size: 19px;
+            line-height: 1.375em;
+            font-weight: 400;
+            font-style: italic;
+            margin: 70px 0;
+        }
+        .item span {
+            font-style: normal;
+        }
+
+        .panel {
+            border: 1px solid darkslategrey;
+            border-radius:0 !important;
+            transition: box-shadow 0.5s;
+        }
+        .panel:hover {
+            box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+        }
+        .panel-footer .btn:hover {
+            border: 1px solid darkslategrey;
+            background-color: #fff !important;
+            color: darkslategrey;
+        }
+        .panel-heading {
+            color: #000 !important;
+            text-align: center;
+            background-color: white !important;
+            margin: 2vw;
+            border-bottom: 1px solid transparent;
+            border-radius: 0px;
+            width: 30vw;
+
+        }
+        .panel-footer {
+            background-color: white !important;
+        }
+        .panel-footer h3 {
+            font-size: 32px;
+        }
+        .panel-footer h4 {
+            color: #aaa;
+            font-size: 14px;
+        }
+        .panel-footer .btn {
+            margin: 15px 0;
+            background-color: darkslategrey;
+            color: #fff;
+        }
+        .panel-default {
+            border: 1px solid darkslategray;
+            background-color: white;
+        }
+        .navbar {
+            margin-bottom: 0;
+            background-color: darkslategrey;
+            z-index: 9999;
+            border: 0;
+            font-size: 12px !important;
+            line-height: 1.42857143 !important;
+            letter-spacing: 4px;
+            border-radius: 0;
+            font-family: Montserrat, sans-serif;
+        }
+        .navbar li a, .navbar .navbar-brand {
+            color: #fff !important;
+        }
+        .navbar-nav li a:hover, .navbar-nav li.active a {
+            color: darkslategrey !important;
+            background-color: #fff !important;
+        }
+        .navbar-default .navbar-toggle {
+            border-color: transparent;
+            color: darkslategrey !important;
+        }
+        footer .glyphicon {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: darkslategrey;
+        }
+        .slideanim {visibility:hidden;}
+        .slide {
+            animation-name: slide;
+            -webkit-animation-name: slide;
+            animation-duration: 1s;
+            -webkit-animation-duration: 1s;
+            visibility: visible;
+        }
+        @keyframes slide {
+            0% {
+                opacity: 0;
+                transform: translateY(70%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0%);
+            }
+        }
+        @-webkit-keyframes slide {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(70%);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0%);
+            }
+        }
+        @media screen and (max-width: 768px) {
+            .col-sm-4 {
+                text-align: center;
+                margin: 25px 0;
+            }
+            .btn-lg {
+                width: 100%;
+                margin-bottom: 35px;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            .logo {
+                font-size: 150px;
+            }
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .userProfile{
+            width:100%
+        }
+
+        #profile {
+            width: 100vw;
+        }
+
+        #favourites {
+            float-defer-column: last;
+            background-color: darkslategray;
+            color: light;
+        }
+
+        #fav{
+            color: white;
+        }
+
+        #favcontent{
+            color:white;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#myPage">    </a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class = "nav navbar-nav navbar-left">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="clubs.html">CLUBS</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="index.html#vote">VOTE</a></li>
+                <li><a href="index.html#social">SOCIAL</a></li>
+                <li><a href="index.html#news">NEWS</a></li>
+                <li><a href="index.html#contact">CONTACT</a></li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div id="UserProfile">
+    <div id="profile" class="container-fluid bg-grey">
+            <div class="col-sm-5">
+                <h2> profile</h2>
+                <h1><span class="glyphicon glyphicon-user"</span> John Smith</h1>
+                <span class="glyphicon glyphicon-king"></span> Manager
+                <span class="glyphicon glyphicon-map-marker"></span> Glasgow </p> <p>
+                <span class="glyphicon glyphicon-phone"></span> 01563555000  </p> <p>
+                <span class="glyphicon glyphicon-envelope"></span> Smith.j@jpmorganchase.com  </p> <p>
+                <span class="glyphicon glyphicon-triangle-right"</span> Employee for 12 years  </p> <p>
+                <span class="glyphicon glyphicon-heart"</span> 34 Blessings </p> <p>
+                <span class="glyphicon glyphicon-ok"</span> Previous improvements: Foosball table. Beanbag Chairs.</p>
+            </div>
+    </div>
+    <div id="favourites" class="container-fluid bg-white">
+        <div class="col-sm-4">
+            <h2 id = 'fav'> Favourited clubs </h2 id = 'fav'>
+            <div class = 'panel-heading'/>
+            <div > Hiking </div>
+            </div>
+
+        <div class = 'panel-heading'/>
+        <div> Golf </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
