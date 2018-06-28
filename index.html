@@ -11,6 +11,9 @@
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="calendar2Style.css" rel="stylesheet" type="text/css">
+
+
     <style>
 
         body {
@@ -117,6 +120,9 @@
             background-color: darkslategrey;
             color: #fff;
         }
+        #heart{
+            margin-left: 49rem;
+        }
         .navbar {
             margin-bottom: 0;
             background-color: darkslategrey;
@@ -191,6 +197,14 @@
         .center {
             text-align: center;
         }
+
+
+
+
+
+
+
+
     </style>
     <link rel="icon"
           type="image/png"
@@ -232,34 +246,61 @@
 
 </div>
 
-<!-- Container (About Section) -->
+<!--&lt;!&ndash; Container (About Section) &ndash;&gt;-->
+<!--<div id="vote" class="container-fluid">-->
+    <!--<div class="row">-->
+        <!--<div class="col-sm-8">-->
+            <!--<h2>Suggest changes in your workplace</h2><br>-->
+            <!--<h4>-->
+               <!--Go to <br><button class="btn btn-default btn-lg"><a href ="#contact">Get in Touch</a></button>-->
+
+            <!--</h4>-->
+            <!--<p>Founded in 2018.</p>-->
+            <!--<br><button class="btn btn-default btn-lg"><a href ="#contact">Get in Touch</a></button>-->
+        <!--</div>-->
+        <!--<div class="col-sm-4">-->
+            <!--<span class="glyphicon glyphicon-check logo"></span>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+
 <div id="vote" class="container-fluid">
-    <div class="row">
-        <div class="col-sm-8">
-            <h2>Vote for changes in your workplace</h2><br>
-            <h4>
-               Vote vote
-            </h4>
-            <p>Founded in 2018.</p>
-            <br><button class="btn btn-default btn-lg"><a href ="#contact">Get in Touch</a></button>
-        </div>
-        <div class="col-sm-4">
-            <span class="glyphicon glyphicon-check logo"></span>
-        </div>
-    </div>
-</div>
 
 <div class="container-fluid bg-grey">
     <div class="row">
         <div class="col-sm-4">
-            <span class="glyphicon glyphicon-volume-up logo slideanim"></span>
+            <span class="glyphicon glyphicon-check logo slideanim"></span>
         </div>
         <div class="col-sm-8">
             <h2>Vote</h2><br>
             <h4><strong>About us:</strong> Put vote box in here <br></h4><br>
 
+        <div class="ongoingvotes">
+            <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Vote1</a>
+                            <button type="button" class="btn btn-info" id="heart">0
+                                <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+                            </button>
+                            <button type="button" class="btn btn-info" id="star">
+                                <span class="glyphicon glyphicon-star" aria-hidden="false"></span>
+                            </button>
+
+                        </h4>
+                    </div>
+                    <div id="collapse1" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            Description:
+                        </div>
+                    </div>
+                    </div>
         </div>
+
+
     </div>
+
+</div>
 </div>
 
 <!--&lt;!&ndash; Container (Services Section) &ndash;&gt;-->
@@ -330,6 +371,11 @@
     </div>
 </div>
 
+<div id="calendar"></div>
+
+
+
+
 <!-- Container (Pricing Section) -->
 <div id="news" class="container-fluid">
     <div class="text-center">
@@ -386,6 +432,10 @@ Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
     <p>uImprove</p>
 </footer>
 
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
+<script src="calendarJS.js"></script>
 <script>
     $(document).ready(function(){
         // Add smooth scrolling to all links in navbar + footer link
