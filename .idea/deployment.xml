@@ -5,7 +5,7 @@
       <paths name="Cafe">
         <serverdata>
           <mappings>
-            <mapping deploy="Hackathon" local="$PROJECT_DIR$" web="/Hackathon" />
+            <mapping local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
